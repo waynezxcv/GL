@@ -23,11 +23,12 @@
  */
 
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import <GLKit/GLKit.h>
 
-int main(int argc, char * argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+
+//使用OpenGLES绘制一个三角形
+
+
+@interface LearnOpenGLESViewController_1 : GLKViewController
+
+@end

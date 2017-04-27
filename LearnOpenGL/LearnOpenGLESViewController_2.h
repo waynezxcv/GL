@@ -24,10 +24,19 @@
 
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import <GLKit/GLKit.h>
 
-int main(int argc, char * argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+
+
+/*
+ 纹理
+ 纹理是一个用来保存图像的颜色元素值的OpenGL ES缓存.
+ 
+*/
+
+
+
+@interface LearnOpenGLESViewController_2 : GLKViewController
+
+@end
+

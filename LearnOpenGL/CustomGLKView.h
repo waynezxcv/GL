@@ -24,10 +24,30 @@
 
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import <OpenGLES/ES2/gl.h>
+#import <OpenGLES/ES2/glext.h>
 
-int main(int argc, char * argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+@class CustomGLKView;
+
+@protocol CustomGLKViewDelegate <NSObject>
+
+@required
+
+- (void)lw_glkView:(CustomGLKView *)view drawInRect:(CGRect)rect;
+
+@end
+
+
+
+@interface CustomGLKView : UIView
+
+@property (nonatomic,weak) id <CustomGLKViewDelegate> delegate;
+@property (nonatomic,strong) EAGLContext* context;
+@property (nonatomic,assign,readonly) NSInteger drawableWidth;
+@property (nonatomic,assign,readonly) NSInteger drawableHeight;
+
+
+- (void)display;
+
+
+@end
