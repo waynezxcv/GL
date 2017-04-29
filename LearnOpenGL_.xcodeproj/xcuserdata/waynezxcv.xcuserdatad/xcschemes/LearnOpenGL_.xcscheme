@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4201D4B01EB039D700E2850D"
-               BuildableName = "LearnOpenGL.app"
-               BlueprintName = "LearnOpenGL"
-               ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+               BlueprintIdentifier = "4238CCC11EB5024B0086907A"
+               BuildableName = "LearnOpenGL_"
+               BlueprintName = "LearnOpenGL_"
+               ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4201D4B01EB039D700E2850D"
-            BuildableName = "LearnOpenGL.app"
-            BlueprintName = "LearnOpenGL"
-            ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+            BlueprintIdentifier = "4238CCC11EB5024B0086907A"
+            BuildableName = "LearnOpenGL_"
+            BlueprintName = "LearnOpenGL_"
+            ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4201D4B01EB039D700E2850D"
-            BuildableName = "LearnOpenGL.app"
-            BlueprintName = "LearnOpenGL"
-            ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+            BlueprintIdentifier = "4238CCC11EB5024B0086907A"
+            BuildableName = "LearnOpenGL_"
+            BlueprintName = "LearnOpenGL_"
+            ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4201D4B01EB039D700E2850D"
-            BuildableName = "LearnOpenGL.app"
-            BlueprintName = "LearnOpenGL"
-            ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+            BlueprintIdentifier = "4238CCC11EB5024B0086907A"
+            BuildableName = "LearnOpenGL_"
+            BlueprintName = "LearnOpenGL_"
+            ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

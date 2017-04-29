@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LearnOpenGL.xcscheme</key>
+		<key>LearnOpenGL_.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4201D4B01EB039D700E2850D</key>
+		<key>4238CCC11EB5024B0086907A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
