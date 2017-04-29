@@ -29,6 +29,10 @@
 #include <iostream>
 #include <GL/glew.h>
 #include <GL/glfw3.h>
+#include "HelloTriangle.hpp"
+
+
+
 
 /*
  GLFW是一个专门针对OpenGL的C语言库，它提供了一些渲染物体所需的最低限度的接口。它允许用户创建OpenGL上下文，定义窗口参数以及处理用户输入
@@ -45,10 +49,13 @@
  图形渲染管线可以被划分为两个主要部分：第一部分把你的3D坐标转换为2D坐标，第二部分是把2D坐标转变为实际的有颜色的像素。
  */
 
+/*
+ 图形渲染管线接受一组3D坐标，然后把它们转变为你屏幕上的有色2D像素输出。图形渲染管线可以被划分为几个阶段，每个阶段将会把前一个阶段的输出作为输入。所有这些阶段都是高度专门化的（它们都有一个特定的函数），并且很容易并行执行。正是由于它们具有并行执行的特性，当今大多数显卡都有成千上万的小处理核心，它们在GPU上为每一个（渲染管线）阶段运行各自的小程序，从而在图形渲染管线中快速处理你的数据。这些小程序叫做着色器(Shader)。
+ */
 
 using namespace std;
 
-void render(void) {
+void testRender(void) {
     
     //设置清屏颜色，在每个渲染迭代开始的时候清屏
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -66,6 +73,7 @@ void render(void) {
     
     glEnd();
 }
+
 
 
 void setupGLEW() {
@@ -108,17 +116,20 @@ int main(int argc, const char * argv[]) {
         releaseGLFW();
     }
     
-    
     glfwMakeContextCurrent(window);
     
+    
+    LWGL::HelloTriangle helloStriangle;
     
     //创建一个循环，在我们明确关闭程序之前一直渲染。
     while(!glfwWindowShouldClose(window)){
         //检查事件
         glfwPollEvents();
         
+
+        
         //渲染
-        render();
+        helloStriangle.drawTriangle();
         
         //交换缓冲
         glfwSwapBuffers(window);

@@ -11,6 +11,7 @@
 		4238CCCE1EB502780086907A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238CCCD1EB502780086907A /* OpenGL.framework */; };
 		4238CCD01EB504F10086907A /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238CCCF1EB504F10086907A /* libGLEW.2.0.0.dylib */; };
 		4238CCD41EB505220086907A /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238CCD31EB505220086907A /* libglfw.3.2.dylib */; };
+		42970FE81EB5114F0048C698 /* HelloTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42970FE61EB5114F0048C698 /* HelloTriangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		4238CCCF1EB504F10086907A /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		4238CCD11EB504FB0086907A /* Cellar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cellar; path = ../../../../usr/local/Cellar; sourceTree = "<group>"; };
 		4238CCD31EB505220086907A /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		42970FE61EB5114F0048C698 /* HelloTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloTriangle.cpp; sourceTree = "<group>"; };
+		42970FE71EB5114F0048C698 /* HelloTriangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HelloTriangle.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				4238CCC51EB5024B0086907A /* main.cpp */,
+				42970FE61EB5114F0048C698 /* HelloTriangle.cpp */,
+				42970FE71EB5114F0048C698 /* HelloTriangle.hpp */,
 			);
 			path = LearnOpenGL_;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42970FE81EB5114F0048C698 /* HelloTriangle.cpp in Sources */,
 				4238CCC61EB5024B0086907A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
