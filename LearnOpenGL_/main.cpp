@@ -28,35 +28,15 @@
 
 #include <iostream>
 #include "Window.hpp"
-#include "Triangle.hpp"
 
 
 const GLuint kWidth = 640;
 const GLuint kHeight = 480;
 const std::string kTitle = "A OpenGL Project";
 
-
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    
-    LWGL::Window* window = new LWGL::Window(kWidth,kHeight,kTitle);
-    LWGL::Shader* triangleShader = new LWGL::Shader("/Users/waynezxcv/Code/LearnOpenGL/LearnOpenGL_/triangle.vert",
-                                                    "/Users/waynezxcv/Code/LearnOpenGL/LearnOpenGL_/triangle.frag");
-    
-    
-    
-    LWGL::Triangle* triangle = new LWGL::Triangle(*triangleShader);
-    window -> renderCallBack = [triangle]() -> void {
-        triangle -> render();
-    };
-    
-    
-    window -> run();
-    
-    
-    delete window;
-    delete triangleShader;
     
     return 0;
 }
