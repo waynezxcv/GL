@@ -14,8 +14,7 @@
 		425321D71EB747290080D002 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425321D51EB747290080D002 /* Shader.cpp */; };
 		425321D91EB7478E0080D002 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425321D81EB7478E0080D002 /* GLUT.framework */; };
 		425321DC1EB75AE30080D002 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425321DA1EB75AE30080D002 /* Window.cpp */; };
-		425321DF1EB762960080D002 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425321DD1EB762960080D002 /* Texture.cpp */; };
-		42970FE81EB5114F0048C698 /* HelloTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42970FE61EB5114F0048C698 /* HelloTriangle.cpp */; };
+		425322281EB7A7250080D002 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425322261EB7A7250080D002 /* Texture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,10 +41,8 @@
 		425321D81EB7478E0080D002 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		425321DA1EB75AE30080D002 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		425321DB1EB75AE30080D002 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
-		425321DD1EB762960080D002 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
-		425321DE1EB762960080D002 /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
-		42970FE61EB5114F0048C698 /* HelloTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloTriangle.cpp; sourceTree = "<group>"; };
-		42970FE71EB5114F0048C698 /* HelloTriangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HelloTriangle.hpp; sourceTree = "<group>"; };
+		425322261EB7A7250080D002 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		425322271EB7A7250080D002 /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				4238CCC51EB5024B0086907A /* main.cpp */,
-				42970FE61EB5114F0048C698 /* HelloTriangle.cpp */,
-				42970FE71EB5114F0048C698 /* HelloTriangle.hpp */,
 				425321DA1EB75AE30080D002 /* Window.cpp */,
 				425321DB1EB75AE30080D002 /* Window.hpp */,
 				425321D51EB747290080D002 /* Shader.cpp */,
 				425321D61EB747290080D002 /* Shader.hpp */,
-				425321DD1EB762960080D002 /* Texture.cpp */,
-				425321DE1EB762960080D002 /* Texture.hpp */,
+				425322261EB7A7250080D002 /* Texture.cpp */,
+				425322271EB7A7250080D002 /* Texture.hpp */,
 			);
 			path = LearnOpenGL_;
 			sourceTree = "<group>";
@@ -166,8 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425321DF1EB762960080D002 /* Texture.cpp in Sources */,
-				42970FE81EB5114F0048C698 /* HelloTriangle.cpp in Sources */,
+				425322281EB7A7250080D002 /* Texture.cpp in Sources */,
 				425321D71EB747290080D002 /* Shader.cpp in Sources */,
 				4238CCC61EB5024B0086907A /* main.cpp in Sources */,
 				425321DC1EB75AE30080D002 /* Window.cpp in Sources */,
@@ -277,7 +271,9 @@
 					"$(glew_lib)",
 					/usr/local/Cellar/glew/2.0.0/lib,
 					/usr/local/Cellar/glfw/3.2.1/lib,
+					"$(PROJECT_DIR)/LearnOpenGL_/SOIL",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -295,7 +291,9 @@
 					"$(glew_lib)",
 					/usr/local/Cellar/glew/2.0.0/lib,
 					/usr/local/Cellar/glfw/3.2.1/lib,
+					"$(PROJECT_DIR)/LearnOpenGL_/SOIL",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

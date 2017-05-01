@@ -51,29 +51,47 @@
 using namespace LWGL;
 
 
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);
+
+
 Window::Window(const int& width,const int& height,const std::string& title) :width(width) , height(height) ,title(title) {
     
     //初始化GLFW
     if(!glfwInit()){
         return;
     }
+    
+    //设置GLFW
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);  // MAC
+    
     //创建窗口对象
     this -> window = glfwCreateWindow(width, height,title.c_str(), NULL, NULL);
+    glfwMakeContextCurrent(this -> window);
+    
+    //设置按键回调
+    glfwSetKeyCallback(this -> window,keyCallback);
+    
+    //GLEW
+    glewExperimental = GL_TRUE;
+    glewInit();
+    
     
     //告诉OpenGL渲染的窗口尺寸大小
-    int w;
-    int h;
+    int w , h;
     glfwGetFramebufferSize(this -> window, &w, &h);
-    
     //设置窗口的维度
     glViewport(0, 0, w, h);
+    
     
     if(!this -> window) {
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
     
-    glfwMakeContextCurrent(this -> window);
 }
 
 
@@ -110,5 +128,9 @@ int Window::getHeight() const {
     return this -> height;
 }
 
+
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+    
+}
 
 

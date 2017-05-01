@@ -68,7 +68,6 @@ namespace LWGL {
     //这个类用来管理着色器
     class Shader {
     public:
-        
         //着色器程序的ID
         GLuint program;
         

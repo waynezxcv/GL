@@ -115,6 +115,7 @@ Shader::Shader(const GLchar* vertexPath,const GLchar* fragmentPath) {
     const GLchar* vShaderCode = vertexCode.c_str();
     const GLchar* fShaderCode = fragmentCode.c_str();
     
+    
     //2.编译和连接着色器程序
     GLuint vertextShader;
     GLuint fragmentShader;
