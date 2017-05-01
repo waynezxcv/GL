@@ -11,6 +11,10 @@
 		4238CCCE1EB502780086907A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238CCCD1EB502780086907A /* OpenGL.framework */; };
 		4238CCD01EB504F10086907A /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238CCCF1EB504F10086907A /* libGLEW.2.0.0.dylib */; };
 		4238CCD41EB505220086907A /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238CCD31EB505220086907A /* libglfw.3.2.dylib */; };
+		425321D71EB747290080D002 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425321D51EB747290080D002 /* Shader.cpp */; };
+		425321D91EB7478E0080D002 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425321D81EB7478E0080D002 /* GLUT.framework */; };
+		425321DC1EB75AE30080D002 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425321DA1EB75AE30080D002 /* Window.cpp */; };
+		425321DF1EB762960080D002 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425321DD1EB762960080D002 /* Texture.cpp */; };
 		42970FE81EB5114F0048C698 /* HelloTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42970FE61EB5114F0048C698 /* HelloTriangle.cpp */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,13 @@
 		4238CCCF1EB504F10086907A /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		4238CCD11EB504FB0086907A /* Cellar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cellar; path = ../../../../usr/local/Cellar; sourceTree = "<group>"; };
 		4238CCD31EB505220086907A /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		425321D51EB747290080D002 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		425321D61EB747290080D002 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		425321D81EB7478E0080D002 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		425321DA1EB75AE30080D002 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		425321DB1EB75AE30080D002 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		425321DD1EB762960080D002 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		425321DE1EB762960080D002 /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 		42970FE61EB5114F0048C698 /* HelloTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloTriangle.cpp; sourceTree = "<group>"; };
 		42970FE71EB5114F0048C698 /* HelloTriangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HelloTriangle.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425321D91EB7478E0080D002 /* GLUT.framework in Frameworks */,
 				4238CCD41EB505220086907A /* libglfw.3.2.dylib in Frameworks */,
 				4238CCD01EB504F10086907A /* libGLEW.2.0.0.dylib in Frameworks */,
 				4238CCCE1EB502780086907A /* OpenGL.framework in Frameworks */,
@@ -74,6 +86,12 @@
 				4238CCC51EB5024B0086907A /* main.cpp */,
 				42970FE61EB5114F0048C698 /* HelloTriangle.cpp */,
 				42970FE71EB5114F0048C698 /* HelloTriangle.hpp */,
+				425321DA1EB75AE30080D002 /* Window.cpp */,
+				425321DB1EB75AE30080D002 /* Window.hpp */,
+				425321D51EB747290080D002 /* Shader.cpp */,
+				425321D61EB747290080D002 /* Shader.hpp */,
+				425321DD1EB762960080D002 /* Texture.cpp */,
+				425321DE1EB762960080D002 /* Texture.hpp */,
 			);
 			path = LearnOpenGL_;
 			sourceTree = "<group>";
@@ -81,6 +99,7 @@
 		4238CCCC1EB502770086907A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				425321D81EB7478E0080D002 /* GLUT.framework */,
 				4238CCD31EB505220086907A /* libglfw.3.2.dylib */,
 				4238CCD11EB504FB0086907A /* Cellar */,
 				4238CCCF1EB504F10086907A /* libGLEW.2.0.0.dylib */,
@@ -147,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425321DF1EB762960080D002 /* Texture.cpp in Sources */,
 				42970FE81EB5114F0048C698 /* HelloTriangle.cpp in Sources */,
+				425321D71EB747290080D002 /* Shader.cpp in Sources */,
 				4238CCC61EB5024B0086907A /* main.cpp in Sources */,
+				425321DC1EB75AE30080D002 /* Window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

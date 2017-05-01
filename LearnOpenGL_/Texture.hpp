@@ -23,36 +23,25 @@
  */
 
 
+#ifndef Texture_hpp
+#define Texture_hpp
 
-#ifndef HelloTriangle_hpp
-#define HelloTriangle_hpp
+/*
+ 纹理是一个2D图片（甚至也有1D和3D的纹理），它可以用来添加物体的细节；
+ */
+
+/*
+ 我们需要指定三角形的每个顶点各自对应纹理的哪个部分。这样每个顶点就会关联着一个纹理坐标(Texture Coordinate)，用来标明该从纹理图像的哪个部分采样（译注：采集片段颜色）。
+ 之后在图形的其它片段上进行片段插值(Fragment Interpolation)。
+ 
+ 使用纹理坐标获取纹理颜色叫做采样(Sampling)。
+ 
+*/
 
 
-#include <iostream>
-#include <OpenGL/gl.h>
+
+#include <stdio.h>
 
 
 
-
-namespace LWGL {
-    
-    class HelloTriangle {
-        
-    public:
-        
-        HelloTriangle();
-        ~HelloTriangle();
-        
-        void drawTriangle();
-        
-        
-        
-    private:
-        GLuint shaderProgram;
-        GLuint* VAO;
-        GLuint* VBO;
-    };
-    
-}
-
-#endif /* HelloTriangle_hpp */
+#endif /* Texture_hpp */

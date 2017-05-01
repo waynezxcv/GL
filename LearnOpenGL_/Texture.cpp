@@ -24,35 +24,4 @@
 
 
 
-#ifndef HelloTriangle_hpp
-#define HelloTriangle_hpp
-
-
-#include <iostream>
-#include <OpenGL/gl.h>
-
-
-
-
-namespace LWGL {
-    
-    class HelloTriangle {
-        
-    public:
-        
-        HelloTriangle();
-        ~HelloTriangle();
-        
-        void drawTriangle();
-        
-        
-        
-    private:
-        GLuint shaderProgram;
-        GLuint* VAO;
-        GLuint* VBO;
-    };
-    
-}
-
-#endif /* HelloTriangle_hpp */
+#include "Texture.hpp"

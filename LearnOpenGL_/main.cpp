@@ -27,117 +27,29 @@
 
 
 #include <iostream>
-#include <GL/glew.h>
-#include <GL/glfw3.h>
+#include "Window.hpp"
 #include "HelloTriangle.hpp"
 
 
-
-
-/*
- GLFW是一个专门针对OpenGL的C语言库，它提供了一些渲染物体所需的最低限度的接口。它允许用户创建OpenGL上下文，定义窗口参数以及处理用户输入
- */
-
-/*
- 因为OpenGL只是一个标准/规范，具体的实现是由驱动开发商针对特定显卡实现的。由于OpenGL驱动版本众多，它大多数函数的位置都无法在编译时确定下来，需要在运行时查询。
- GLEW是OpenGL Extension Wrangler Library的缩写，它能解决我们上面提到的那个繁琐的问题。
- */
-
-
-/*
- 在OpenGL中，任何事物都在3D空间中，而屏幕和窗口却是2D像素数组，这导致OpenGL的大部分工作都是关于把3D坐标转变为适应你屏幕的2D像素。3D坐标转为2D坐标的处理过程是由OpenGL的图形渲染管线管理的。
- 图形渲染管线可以被划分为两个主要部分：第一部分把你的3D坐标转换为2D坐标，第二部分是把2D坐标转变为实际的有颜色的像素。
- */
-
-/*
- 图形渲染管线接受一组3D坐标，然后把它们转变为你屏幕上的有色2D像素输出。图形渲染管线可以被划分为几个阶段，每个阶段将会把前一个阶段的输出作为输入。所有这些阶段都是高度专门化的（它们都有一个特定的函数），并且很容易并行执行。正是由于它们具有并行执行的特性，当今大多数显卡都有成千上万的小处理核心，它们在GPU上为每一个（渲染管线）阶段运行各自的小程序，从而在图形渲染管线中快速处理你的数据。这些小程序叫做着色器(Shader)。
- */
-
 using namespace std;
 
-void testRender(void) {
-    
-    //设置清屏颜色，在每个渲染迭代开始的时候清屏
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    
-    
-    glBegin(GL_TRIANGLES);
-    
-    glColor3f(1.0f,0.0f,0.0f);
-    glVertex2f(0.0f, 0.5f);
-    glColor3f(0.0f,1.0f,0.0f);
-    glVertex2f(-0.5f,-0.5f);
-    glColor3f(0.0f, 0.0f, 1.0f);
-    glVertex2f(0.5f, -0.5f);
-    
-    glEnd();
-}
 
 
-
-void setupGLEW() {
-    
-    glewExperimental = GL_TRUE;
-    if (!glewInit()) {
-        cout<<"failed to initialize GLEW"<<endl;
-    }
-    
-}
-
-
-void releaseGLFW() {
-    glfwTerminate();
-    exit(EXIT_FAILURE);
-}
 
 
 int main(int argc, const char * argv[]) {
     
-    //初始化GLFW
-    if(!glfwInit()){
-        return -1;
-    }
-    
-    //创建窗口对象
-    GLFWwindow* window = glfwCreateWindow(640.0f, 480.0f, "A OpenGL Project", NULL, NULL);
     
     
-    //告诉OpenGL渲染的窗口尺寸大小
-    int width;
-    int height;
-    glfwGetFramebufferSize(window, &width, &height);
-    
-    //设置窗口的维度
-    glViewport(0, 0, width, height);
-    
-    
-    if(!window) {
-        releaseGLFW();
-    }
-    
-    glfwMakeContextCurrent(window);
-    
-    
-    LWGL::HelloTriangle helloStriangle;
-    
-    //创建一个循环，在我们明确关闭程序之前一直渲染。
-    while(!glfwWindowShouldClose(window)){
-        //检查事件
-        glfwPollEvents();
+    LWGL::Window window(640,480,"A OpenGL Project");
+    window.renderCallBack = []() -> void {
         
-
-        
-        //渲染
-        helloStriangle.drawTriangle();
-        
-        //交换缓冲
-        glfwSwapBuffers(window);
-    }
+        LWGL::HelloTriangle triangle;
+        triangle.drawTriangle();
+    };
     
     
-    //在循环结束后，我们需要正确释放内存
-    releaseGLFW();
+    window.run();
     
     return 0;
 }

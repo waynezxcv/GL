@@ -23,36 +23,39 @@
  */
 
 
-
-#ifndef HelloTriangle_hpp
-#define HelloTriangle_hpp
-
+#ifndef Window_hpp
+#define Window_hpp
 
 #include <iostream>
-#include <OpenGL/gl.h>
-
-
+#include <GL/glew.h>
+#include <GL/glfw3.h>
 
 
 namespace LWGL {
     
-    class HelloTriangle {
+    class Window {
         
     public:
         
-        HelloTriangle();
-        ~HelloTriangle();
+        Window(const int& width,const int& height,const std::string& title);
+        ~Window();
         
-        void drawTriangle();
+        void run();
+        std::function<void(void)> renderCallBack;
         
-        
+        int getWidth() const;
+        int getHeight() const;
         
     private:
-        GLuint shaderProgram;
-        GLuint* VAO;
-        GLuint* VBO;
+        
+        int width;
+        int height;
+        std::string title;
+        GLFWwindow* window;
     };
-    
 }
 
-#endif /* HelloTriangle_hpp */
+
+
+
+#endif /* Window_hpp */
