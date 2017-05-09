@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4238CCC11EB5024B0086907A"
-               BuildableName = "LearnOpenGL_"
-               BlueprintName = "LearnOpenGL_"
-               ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
+               BlueprintIdentifier = "4275A3A51EC21C89005A2C4A"
+               BuildableName = "LearnOpenGLES.app"
+               BlueprintName = "LearnOpenGLES"
+               ReferencedContainer = "container:LearnOpenGLES.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4238CCC11EB5024B0086907A"
-            BuildableName = "LearnOpenGL_"
-            BlueprintName = "LearnOpenGL_"
-            ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
+            BlueprintIdentifier = "4275A3A51EC21C89005A2C4A"
+            BuildableName = "LearnOpenGLES.app"
+            BlueprintName = "LearnOpenGLES"
+            ReferencedContainer = "container:LearnOpenGLES.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4238CCC11EB5024B0086907A"
-            BuildableName = "LearnOpenGL_"
-            BlueprintName = "LearnOpenGL_"
-            ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
+            BlueprintIdentifier = "4275A3A51EC21C89005A2C4A"
+            BuildableName = "LearnOpenGLES.app"
+            BlueprintName = "LearnOpenGLES"
+            ReferencedContainer = "container:LearnOpenGLES.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4238CCC11EB5024B0086907A"
-            BuildableName = "LearnOpenGL_"
-            BlueprintName = "LearnOpenGL_"
-            ReferencedContainer = "container:LearnOpenGL_.xcodeproj">
+            BlueprintIdentifier = "4275A3A51EC21C89005A2C4A"
+            BuildableName = "LearnOpenGLES.app"
+            BlueprintName = "LearnOpenGLES"
+            ReferencedContainer = "container:LearnOpenGLES.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
