@@ -26,6 +26,8 @@
         GLchar message[512];
         GLint sucess;
         
+        
+        
         //顶点着色器
         vertextShader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertextShader, 1, &vertextSource, NULL);
@@ -38,6 +40,7 @@
             return nil;
             
         }
+        
         
         //片段着色器
         fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);

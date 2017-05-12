@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 
-#define NUMBER 1
+#define NUMBER 7
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -29,6 +29,8 @@
         NSString* className = [NSString stringWithFormat:@"LearnOpenGLESViewController_%ld",(long)i + 1];
         [self.dataSource addObject:className];
     }
+    
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

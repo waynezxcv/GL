@@ -16,9 +16,26 @@
 		4275A3C21EC21F17005A2C4A /* LearnOpenGLESViewController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4275A3C11EC21F17005A2C4A /* LearnOpenGLESViewController_1.m */; };
 		4275A3C51EC22025005A2C4A /* CustomShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4275A3C41EC22025005A2C4A /* CustomShader.m */; };
 		4275A3C81EC228BC005A2C4A /* CustomGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4275A3C71EC228BC005A2C4A /* CustomGLKView.m */; };
-		4275A3CB1EC23652005A2C4A /* shaderf.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4275A3C91EC23652005A2C4A /* shaderf.fsh */; };
-		4275A3CC1EC23652005A2C4A /* shaderv.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4275A3CA1EC23652005A2C4A /* shaderv.vsh */; };
 		4275A3D21EC2387C005A2C4A /* TextureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4275A3D11EC2387C005A2C4A /* TextureHelper.m */; };
+		BE4BC4FD1EC3FD8900A5ED74 /* vertextShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BE4BC4FC1EC3FD8900A5ED74 /* vertextShader.glsl */; };
+		BE4BC4FF1EC3FD9C00A5ED74 /* fragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BE4BC4FE1EC3FD9C00A5ED74 /* fragmentShader.glsl */; };
+		BE4BC5011EC414AF00A5ED74 /* vs1.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BE4BC5001EC414AF00A5ED74 /* vs1.glsl */; };
+		BE4BC5031EC414B800A5ED74 /* fs1.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BE4BC5021EC414B800A5ED74 /* fs1.glsl */; };
+		BE4BC50A1EC41A2700A5ED74 /* LearnOpenGLESViewController_5.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4BC5091EC41A2700A5ED74 /* LearnOpenGLESViewController_5.m */; };
+		BE5F0E741EC47D9B0012E003 /* fragmentShader1.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BE5F0E731EC47D9B0012E003 /* fragmentShader1.glsl */; };
+		BE5F0E761EC47DA90012E003 /* vertextShader1.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BE5F0E751EC47DA90012E003 /* vertextShader1.glsl */; };
+		BE5F0E7C1EC4BF050012E003 /* LearnOpenGLESViewController_6.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5F0E7B1EC4BF050012E003 /* LearnOpenGLESViewController_6.m */; };
+		BE8D5B641EC30C99009AAE9A /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B5E1EC30C99009AAE9A /* GLESMath.c */; };
+		BE8D5B651EC30C99009AAE9A /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B611EC30C99009AAE9A /* GLESUtils.m */; };
+		BE8D5B681EC31384009AAE9A /* LearnOpenGLESViewController_4.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B671EC31384009AAE9A /* LearnOpenGLESViewController_4.m */; };
+		BEAE2CAF1EC44C1900F2528D /* pic2.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAE2CAE1EC44C1900F2528D /* pic2.png */; };
+		BEB779761EC5F13600708E0B /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEB779751EC5F13600708E0B /* pic.jpg */; };
+		BECBD7CA1EC2B456003C8ADE /* LearnOpenGLESViewController_2.m in Sources */ = {isa = PBXBuildFile; fileRef = BECBD7C91EC2B456003C8ADE /* LearnOpenGLESViewController_2.m */; };
+		BECBD7CD1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.m in Sources */ = {isa = PBXBuildFile; fileRef = BECBD7CC1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.m */; };
+		BEEA8CAC1EC58D77001176FC /* vertexShader2.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BEEA8CAB1EC58D77001176FC /* vertexShader2.glsl */; };
+		BEEA8CAE1EC58DBC001176FC /* fragmentShader2.glsl in Resources */ = {isa = PBXBuildFile; fileRef = BEEA8CAD1EC58DBC001176FC /* fragmentShader2.glsl */; };
+		BEEA8CB11EC5B856001176FC /* LearnOpenGLESViewController_7.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEA8CB01EC5B856001176FC /* LearnOpenGLESViewController_7.m */; };
+		BEEA8CB31EC5BA0E001176FC /* skybox0.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEA8CB21EC5BA0E001176FC /* skybox0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +55,37 @@
 		4275A3C41EC22025005A2C4A /* CustomShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomShader.m; sourceTree = "<group>"; };
 		4275A3C61EC228BC005A2C4A /* CustomGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGLKView.h; sourceTree = "<group>"; };
 		4275A3C71EC228BC005A2C4A /* CustomGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGLKView.m; sourceTree = "<group>"; };
-		4275A3C91EC23652005A2C4A /* shaderf.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shaderf.fsh; sourceTree = "<group>"; };
-		4275A3CA1EC23652005A2C4A /* shaderv.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shaderv.vsh; sourceTree = "<group>"; };
 		4275A3D01EC2387C005A2C4A /* TextureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureHelper.h; sourceTree = "<group>"; };
 		4275A3D11EC2387C005A2C4A /* TextureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureHelper.m; sourceTree = "<group>"; };
+		BE4BC4FC1EC3FD8900A5ED74 /* vertextShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertextShader.glsl; sourceTree = "<group>"; };
+		BE4BC4FE1EC3FD9C00A5ED74 /* fragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentShader.glsl; sourceTree = "<group>"; };
+		BE4BC5001EC414AF00A5ED74 /* vs1.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vs1.glsl; sourceTree = "<group>"; };
+		BE4BC5021EC414B800A5ED74 /* fs1.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fs1.glsl; sourceTree = "<group>"; };
+		BE4BC5081EC41A2700A5ED74 /* LearnOpenGLESViewController_5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnOpenGLESViewController_5.h; sourceTree = "<group>"; };
+		BE4BC5091EC41A2700A5ED74 /* LearnOpenGLESViewController_5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnOpenGLESViewController_5.m; sourceTree = "<group>"; };
+		BE5F0E731EC47D9B0012E003 /* fragmentShader1.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentShader1.glsl; sourceTree = "<group>"; };
+		BE5F0E751EC47DA90012E003 /* vertextShader1.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertextShader1.glsl; sourceTree = "<group>"; };
+		BE5F0E7A1EC4BF050012E003 /* LearnOpenGLESViewController_6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnOpenGLESViewController_6.h; sourceTree = "<group>"; };
+		BE5F0E7B1EC4BF050012E003 /* LearnOpenGLESViewController_6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnOpenGLESViewController_6.m; sourceTree = "<group>"; };
+		BE8D5B5E1EC30C99009AAE9A /* GLESMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLESMath.c; sourceTree = "<group>"; };
+		BE8D5B5F1EC30C99009AAE9A /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
+		BE8D5B601EC30C99009AAE9A /* GLESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtils.h; sourceTree = "<group>"; };
+		BE8D5B611EC30C99009AAE9A /* GLESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESUtils.m; sourceTree = "<group>"; };
+		BE8D5B621EC30C99009AAE9A /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		BE8D5B631EC30C99009AAE9A /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		BE8D5B661EC31384009AAE9A /* LearnOpenGLESViewController_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnOpenGLESViewController_4.h; sourceTree = "<group>"; };
+		BE8D5B671EC31384009AAE9A /* LearnOpenGLESViewController_4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnOpenGLESViewController_4.m; sourceTree = "<group>"; };
+		BEAE2CAE1EC44C1900F2528D /* pic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic2.png; sourceTree = "<group>"; };
+		BEB779751EC5F13600708E0B /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
+		BECBD7C81EC2B456003C8ADE /* LearnOpenGLESViewController_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnOpenGLESViewController_2.h; sourceTree = "<group>"; };
+		BECBD7C91EC2B456003C8ADE /* LearnOpenGLESViewController_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnOpenGLESViewController_2.m; sourceTree = "<group>"; };
+		BECBD7CB1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnOpenGLESViewController_3.h; sourceTree = "<group>"; };
+		BECBD7CC1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnOpenGLESViewController_3.m; sourceTree = "<group>"; };
+		BEEA8CAB1EC58D77001176FC /* vertexShader2.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexShader2.glsl; sourceTree = "<group>"; };
+		BEEA8CAD1EC58DBC001176FC /* fragmentShader2.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentShader2.glsl; sourceTree = "<group>"; };
+		BEEA8CAF1EC5B856001176FC /* LearnOpenGLESViewController_7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnOpenGLESViewController_7.h; sourceTree = "<group>"; };
+		BEEA8CB01EC5B856001176FC /* LearnOpenGLESViewController_7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnOpenGLESViewController_7.m; sourceTree = "<group>"; };
+		BEEA8CB21EC5BA0E001176FC /* skybox0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skybox0.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,18 +118,33 @@
 		4275A3A81EC21C89005A2C4A /* LearnOpenGLES */ = {
 			isa = PBXGroup;
 			children = (
-				4275A3C91EC23652005A2C4A /* shaderf.fsh */,
-				4275A3CA1EC23652005A2C4A /* shaderv.vsh */,
+				BE4BC5041EC419BF00A5ED74 /* Resource */,
+				BE4BC5071EC419F800A5ED74 /* GLMath */,
+				BE4BC5051EC419CA00A5ED74 /* Commons */,
 				4275A3AF1EC21C89005A2C4A /* ViewController.h */,
 				4275A3B01EC21C89005A2C4A /* ViewController.m */,
-				4275A3C31EC22025005A2C4A /* CustomShader.h */,
-				4275A3C41EC22025005A2C4A /* CustomShader.m */,
-				4275A3D01EC2387C005A2C4A /* TextureHelper.h */,
-				4275A3D11EC2387C005A2C4A /* TextureHelper.m */,
-				4275A3C61EC228BC005A2C4A /* CustomGLKView.h */,
-				4275A3C71EC228BC005A2C4A /* CustomGLKView.m */,
 				4275A3C01EC21F17005A2C4A /* LearnOpenGLESViewController_1.h */,
 				4275A3C11EC21F17005A2C4A /* LearnOpenGLESViewController_1.m */,
+				BECBD7C81EC2B456003C8ADE /* LearnOpenGLESViewController_2.h */,
+				BECBD7C91EC2B456003C8ADE /* LearnOpenGLESViewController_2.m */,
+				BEEA8CAB1EC58D77001176FC /* vertexShader2.glsl */,
+				BEEA8CAD1EC58DBC001176FC /* fragmentShader2.glsl */,
+				BECBD7CB1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.h */,
+				BECBD7CC1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.m */,
+				BE4BC4FC1EC3FD8900A5ED74 /* vertextShader.glsl */,
+				BE4BC4FE1EC3FD9C00A5ED74 /* fragmentShader.glsl */,
+				BE8D5B661EC31384009AAE9A /* LearnOpenGLESViewController_4.h */,
+				BE8D5B671EC31384009AAE9A /* LearnOpenGLESViewController_4.m */,
+				BE4BC5001EC414AF00A5ED74 /* vs1.glsl */,
+				BE4BC5021EC414B800A5ED74 /* fs1.glsl */,
+				BE4BC5081EC41A2700A5ED74 /* LearnOpenGLESViewController_5.h */,
+				BE4BC5091EC41A2700A5ED74 /* LearnOpenGLESViewController_5.m */,
+				BE5F0E751EC47DA90012E003 /* vertextShader1.glsl */,
+				BE5F0E731EC47D9B0012E003 /* fragmentShader1.glsl */,
+				BE5F0E7A1EC4BF050012E003 /* LearnOpenGLESViewController_6.h */,
+				BE5F0E7B1EC4BF050012E003 /* LearnOpenGLESViewController_6.m */,
+				BEEA8CAF1EC5B856001176FC /* LearnOpenGLESViewController_7.h */,
+				BEEA8CB01EC5B856001176FC /* LearnOpenGLESViewController_7.m */,
 				4275A3A91EC21C89005A2C4A /* Supporting Files */,
 			);
 			path = LearnOpenGLES;
@@ -103,6 +162,42 @@
 				4275A3AA1EC21C89005A2C4A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE4BC5041EC419BF00A5ED74 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BEB779751EC5F13600708E0B /* pic.jpg */,
+				BEEA8CB21EC5BA0E001176FC /* skybox0.png */,
+				BEAE2CAE1EC44C1900F2528D /* pic2.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		BE4BC5051EC419CA00A5ED74 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4275A3C31EC22025005A2C4A /* CustomShader.h */,
+				4275A3C41EC22025005A2C4A /* CustomShader.m */,
+				4275A3D01EC2387C005A2C4A /* TextureHelper.h */,
+				4275A3D11EC2387C005A2C4A /* TextureHelper.m */,
+				4275A3C61EC228BC005A2C4A /* CustomGLKView.h */,
+				4275A3C71EC228BC005A2C4A /* CustomGLKView.m */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		BE4BC5071EC419F800A5ED74 /* GLMath */ = {
+			isa = PBXGroup;
+			children = (
+				BE8D5B5E1EC30C99009AAE9A /* GLESMath.c */,
+				BE8D5B5F1EC30C99009AAE9A /* GLESMath.h */,
+				BE8D5B601EC30C99009AAE9A /* GLESUtils.h */,
+				BE8D5B611EC30C99009AAE9A /* GLESUtils.m */,
+				BE8D5B621EC30C99009AAE9A /* Quaternion.h */,
+				BE8D5B631EC30C99009AAE9A /* Vector.h */,
+			);
+			name = GLMath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +231,8 @@
 				TargetAttributes = {
 					4275A3A51EC21C89005A2C4A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = N29J3PPND9;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 7UL3LRJL93;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -164,11 +259,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4275A3CC1EC23652005A2C4A /* shaderv.vsh in Resources */,
+				BEB779761EC5F13600708E0B /* pic.jpg in Resources */,
+				BE4BC4FD1EC3FD8900A5ED74 /* vertextShader.glsl in Resources */,
 				4275A3B91EC21C89005A2C4A /* LaunchScreen.storyboard in Resources */,
 				4275A3B61EC21C89005A2C4A /* Assets.xcassets in Resources */,
+				BEEA8CAE1EC58DBC001176FC /* fragmentShader2.glsl in Resources */,
+				BEEA8CAC1EC58D77001176FC /* vertexShader2.glsl in Resources */,
+				BE5F0E761EC47DA90012E003 /* vertextShader1.glsl in Resources */,
 				4275A3B41EC21C89005A2C4A /* Main.storyboard in Resources */,
-				4275A3CB1EC23652005A2C4A /* shaderf.fsh in Resources */,
+				BE5F0E741EC47D9B0012E003 /* fragmentShader1.glsl in Resources */,
+				BE4BC5031EC414B800A5ED74 /* fs1.glsl in Resources */,
+				BE4BC5011EC414AF00A5ED74 /* vs1.glsl in Resources */,
+				BE4BC4FF1EC3FD9C00A5ED74 /* fragmentShader.glsl in Resources */,
+				BEEA8CB31EC5BA0E001176FC /* skybox0.png in Resources */,
+				BEAE2CAF1EC44C1900F2528D /* pic2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,12 +284,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4275A3D21EC2387C005A2C4A /* TextureHelper.m in Sources */,
+				BECBD7CA1EC2B456003C8ADE /* LearnOpenGLESViewController_2.m in Sources */,
 				4275A3C81EC228BC005A2C4A /* CustomGLKView.m in Sources */,
+				BE8D5B641EC30C99009AAE9A /* GLESMath.c in Sources */,
+				BE4BC50A1EC41A2700A5ED74 /* LearnOpenGLESViewController_5.m in Sources */,
 				4275A3C21EC21F17005A2C4A /* LearnOpenGLESViewController_1.m in Sources */,
 				4275A3B11EC21C89005A2C4A /* ViewController.m in Sources */,
 				4275A3AE1EC21C89005A2C4A /* AppDelegate.m in Sources */,
+				BE8D5B681EC31384009AAE9A /* LearnOpenGLESViewController_4.m in Sources */,
 				4275A3AB1EC21C89005A2C4A /* main.m in Sources */,
+				BECBD7CD1EC2B90E003C8ADE /* LearnOpenGLESViewController_3.m in Sources */,
 				4275A3C51EC22025005A2C4A /* CustomShader.m in Sources */,
+				BE5F0E7C1EC4BF050012E003 /* LearnOpenGLESViewController_6.m in Sources */,
+				BE8D5B651EC30C99009AAE9A /* GLESUtils.m in Sources */,
+				BEEA8CB11EC5B856001176FC /* LearnOpenGLESViewController_7.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,11 +415,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N29J3PPND9;
+				DEVELOPMENT_TEAM = 7UL3LRJL93;
 				INFOPLIST_FILE = LearnOpenGLES/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waynezxcv.LearnOpenGLES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d9e05519-cba6-4920-81da-3811c7859555";
+				PROVISIONING_PROFILE_SPECIFIER = "dji develop";
 			};
 			name = Debug;
 		};
@@ -315,11 +429,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N29J3PPND9;
+				DEVELOPMENT_TEAM = 7UL3LRJL93;
 				INFOPLIST_FILE = LearnOpenGLES/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waynezxcv.LearnOpenGLES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d9e05519-cba6-4920-81da-3811c7859555";
+				PROVISIONING_PROFILE_SPECIFIER = "dji develop";
 			};
 			name = Release;
 		};
@@ -342,6 +458,7 @@
 				4275A3BF1EC21C89005A2C4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

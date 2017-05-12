@@ -13,8 +13,6 @@
 //GLKit中的GLKBaseEffect即使封装了基本的着色器程序
 
 
-
-
 @interface CustomShader : NSObject
 
 

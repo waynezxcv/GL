@@ -6,8 +6,12 @@
 //  Copyright © 2017年 waynezxcv. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <GLKit/GLKit.h>
 
-@interface LearnOpenGLESViewController_1 : UIViewController
+
+//渲染管线与VBO,EBO
+
+
+@interface LearnOpenGLESViewController_1 : GLKViewController
 
 @end

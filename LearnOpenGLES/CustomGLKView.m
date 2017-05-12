@@ -99,6 +99,7 @@
         glGenRenderbuffers(1, &_colorRenderBuffer);
         glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
         
+        
         //将_colorRenderBuffer装配到GL_COLOR_ATTACHMENT0 这个装配点上
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
     }

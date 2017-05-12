@@ -6,9 +6,14 @@
 //  Copyright © 2017年 waynezxcv. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <GLKit/GLKit.h>
+
+
+
+
 
 @interface TextureHelper : NSObject
 
++ (GLuint)textureWithImageName:(NSString *)imageName;
 
 @end
