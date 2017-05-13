@@ -6,12 +6,11 @@ attribute vec2 textureCoord;
 uniform highp float globalTime;
 uniform highp float columnCount;
 
-//输出
+//输出到片段着色器
 varying lowp vec4 passPosition;
 varying highp vec2 passCoord;
 varying highp float passTime;
 varying highp float passCount;
-varying highp float passOffset;
 
 
 void main() {
