@@ -14,14 +14,14 @@ void main() {
     highp float y = passCoord.y;
     highp float gap = (1.0/passCount);
     
-    if (mod(ceil(((x + passTime)/ gap)),2.0) == 0.0) {
-        if (mod(ceil((y / gap)),2.0) == 0.0) {
+    if (mod(ceil(((x + passTime)/ gap)),2.0) > 0.0) {
+        if (mod(ceil((y / gap)),2.0) > 0.0) {
             gl_FragColor = vec4(0.0,0.0,0.0,1.0);
         } else {
             gl_FragColor = vec4(1.0,1.0,1.0,1.0);
         }
     } else {
-        if (mod(ceil((y / gap)),2.0) == 0.0) {
+        if (mod(ceil((y / gap)),2.0) > 0.0) {
             gl_FragColor = vec4(1.0,1.0,1.0,1.0);
         } else {
             gl_FragColor = vec4(0.0,0.0,0.0,1.0);
