@@ -1,6 +1,7 @@
 ## OpenGLES入门
 
 ### OpenGL 渲染管线Pipeline
+
 是指三维渲染的过程中显卡执行的、从几何体到最终渲染图像的、数据传输处理计算的过程。
 
 1. 顶点着色器:渲染管线的第一个部分是顶点着色器（vertex shader），它把一个单独的顶点作为输入。顶点着色器主要的目的是把3D坐标转为另一种3D坐标（投影坐标），同时顶点着色器允许我们对顶点属性进行一些基本处理。
@@ -81,6 +82,7 @@
 ```
 
 ### 顶点缓存对象VBO
+
 定义顶点数据以后，我们会把它作为输入发送给图形渲染管线的第一个处理阶段：顶点着色器。它会在GPU上创建内存用于储存我们的顶点数据，还要配置OpenGL如何解释这些内存，并且指定其如何发送给显卡。顶点着色器接着会处理我们在内存中指定数量的顶点。
 
 我们通过顶点缓存对象(Vertex Buffer Objects, VBO)管理这个内存，它会在GPU内存(通常被称为显存)中储存大量顶点。使用这些缓存对象的好处是我们可以一次性的发送一大批数据到显卡上，而不是每个顶点发送一次。从CPU把数据发送到显卡相对较慢，所以只要可能我们都要尝试尽量一次性发送尽可能多的数据。当数据发送至显卡的内存中后，顶点着色器几乎能立即访问顶点，这是个非常快的过程。
@@ -107,10 +109,12 @@
                           GL_FALSE,//是否标准化，若GL_TRUE所有数据会被映射到-1到1之间
                           3 * sizeof(GLfloat),//步长，表示连续顶点属性之间的间隔。
                           (GLvoid *)0);//它表示位置数据在缓存中起始位置的偏移量(Offset)。由于位置数据在数组的开头，所以这里是0。
-    glEnableVertexAttribArray(vertexPosition);    
+    glEnableVertexAttribArray(vertexPosition);  
+      
 ```
 
 ### 顶点数组对象 VAO
+
 顶点数组对象(Vertex Array Object, VAO)可以像顶点缓存对象那样被绑定，任何随后的顶点属性调用都会储存在这个VAO中。这样的好处就是，当配置顶点属性指针时，你只需要将那些调用执行一次，之后再绘制物体的时候只需要绑定相应的VAO就行了。这使在不同顶点数据和属性配置之间切换变得非常简单，只需要绑定不同的VAO就行了，刚刚设置的所有状态都将存储在VAO中。
 
 ```
@@ -123,9 +127,11 @@
     
     //解绑VAO
     glBindVertexArrayOES(0);
+    
 ```
 
 ### 索引缓存对象 EBO
+
 对于重叠的顶点只储存不同的顶点，并设定绘制这些顶点的顺序。，之后只要指定绘制的顺序就行了。
 
 ```
@@ -177,6 +183,7 @@
 ```
 
 ### 纹理
+
 2D纹理图像,纹理坐标在x和y轴上，范围为0到1之间
 纹理坐标起始于(0, 0)，也就是纹理图片的左下角，终始于(1, 1)，即纹理图片的右上角。
 
@@ -197,9 +204,11 @@
 ```
 
 ### GLSL
+
 着色器语言，跟C语言语法很类似。
 
 ### GLSL常用数据类型
+
 - float :浮点型
 - vecn : 包含n个float分量的默认向量。一个向量的分量可以通过vec.x这种方式获取，这里x是指这个向量的第一个分量。你可以分别使用.x、.y、.z和.w来获取它们的第1、2、3、4个分量。GLSL也允许你对颜色使用rgba，或是对纹理坐标使用stpq访问相同的分量。
 - matn:矩阵
@@ -238,6 +247,7 @@
 顶点着色器
 
 ```
+
 //输入
 attribute vec3 inputPosition;//从application中传入的顶点位置信息
 attribute vec2 textureCoord;//从application中传入的纹理坐标信息
@@ -261,6 +271,7 @@ void main() {
 
 
 ```
+
 片段着色器
 
 ```
@@ -294,6 +305,7 @@ void main() {
 ```
 
 ### OpenGL坐标系统
+
 - 局部空间：你的模型的所有顶点都是在局部空间中,它们相对于你的物体来说都是局部的。
 - 世界空间：是指顶点相对于世界的坐标。
 - 观察空间：观察空间是将世界空间坐标转化为用户视野前方的坐标而产生的结果。因此观察空间就是从摄像机的视角所观察到的空间。而这通常是由一系列的位移和旋转的组合来完成，平移/旋转场景从而使得特定的对象被变换到摄像机的前方。
@@ -303,6 +315,7 @@ void main() {
 ## 在iOS中使用OpenGLES
 
 ### GLKit概述
+
 - 在 iOS中使用EAGL提供的EAGLContext类 来实现和提供一个呈现环境，用来保持OpenGLES使用到的硬件状态。  EAGL是一个Objective-C API，提供使OpenGL ES与Core Animation和UIKit集成的接口。
 - GLKView 和GLKViewController类提供一个标准的OpenGLES视图和相关联的呈现循环。GLKView可以作为OpenGLES内容的呈现目标，GLKViewController提供内容呈现的控制和动画。视图管理和维护一个framebuffer，应用只需在framebuffer进行绘画即可。
 - GLKTextureLoader 为应用提供从iOS支持的各种图像格式的源自动加载纹理图像到OpenGLES 图像环境的方式，并能够进行适当的转换，并支持同步和异步加载方式。
@@ -310,7 +323,9 @@ void main() {
 - Effect效果类提供标准的公共着色效果的实现。能够配置效果和相关的顶点数据，然后创建和加载适当的着色器。GLKit 包括三个可配置着色效果类：GLKBaseEffect实现OpenGL ES 1.1规范中的关键的灯光和材料模式, GLKSkyboxEffect提供一个skybox效果的实现, GLKReflectionMapEffect 在GLKBaseEffect基础上包括反射映射支持。
 
 ### GLKit中的变换操作
+
 #### 基本变换
+
 - 平移 : GLKMatrix4MakeTranslation(float tx, float ty, float tz)
 - 旋转 : GLKMatrix4MakeRotation(float radians, float x, float y, float z)
 - 缩放 : GLKMatrix4MakeScale(float sx, float sy, float sz)
@@ -322,10 +337,12 @@ GLKitBaseEffect的tranform属性是一个GLKEffectPropertyTransform类型实例�
 
 
 #### 看向一个特定的3D位置
+
 - GLKMatrix4MakeLookAt()：前三个参数是观察者眼睛的位置，接下来的3个参数指定观察者正在看下的位置。
 
 
 ### 一些优化方法
+
 - 剔除看不见的细节。
 - 简化渲染内容。
 - 尽量减少缓存复制，无论是从CPU到GPU（glBufferData()）还是从GPU到CPU（glReadPixel()）。
@@ -335,7 +352,10 @@ GLKitBaseEffect的tranform属性是一个GLKEffectPropertyTransform类型实例�
 
 ## GPUImage源码分析
 
+GPUImage把所有视频帧转换成OpenGLES的纹理，然后使用OpenGLES来处理。
+
 ### GPUImage的渲染管线
+
 首先，GPUImage中有这么几个概念：
 
 - output输出源，表示这个对象可以作为管线中的输出者，都是GPUImageOutput或它的子类。
@@ -349,9 +369,11 @@ GLKitBaseEffect的tranform属性是一个GLKEffectPropertyTransform类型实例�
 --- 
 
 ### CoreVideo基础
+
 在GPUImage中使用到了CoreVideo框架中的一些内容，所以先需要对CoreVideo有一些了解。
 
 #### CoreVideo概述
+
 CoreVideo为视频提供流水线模型。它通过将流程分为离散步骤来简化对视频的处理。这使得开发人员更容易访问和操作单个框架，而不必担心在数据类型（QuickTime，OpenGL等）之间进行翻译或显示同步问题。如果你的应用不需要逐帧地处理视频，将不需要直接使用CoreVideo。
 
 - CVBufferRef 定义了如何与缓存区进行交互。缓存对象可以保存视频，音频或其他类型的数据。 Core Video定义的所有其他缓存区类型，例如CVImageBuffer和CVPixelBuffer都是从CVBuffer派生的。
@@ -362,29 +384,51 @@ CoreVideo为视频提供流水线模型。它通过将流程分为离散步骤�
 
 
 ### GPUImage公共类
+
 #### GLProgram
+
 封装了OpenGLES的着色器程序。把顶点着色器和片段着色器的GLSL源码传入，然后生成着色器程序编译、链接、使用。
 
 #### GPUImageContext
+
 一个单例，用来管理EAGLContext、着色器程序、GCD队列等。
+
 ##### contextQueue
+
 一个串行队列，通过dispatch_queue_set_specific设置了标识符。GPUImage中的输出都通过*runSynchronouslyOnVideoProcessingQueue*方法放在这个串行队列中执行。
+
 ##### shaderProgramCache
+
 缓存了着色器程序，一个字典，以[NSString stringWithFormat:@"V: %@ - F: %@", vertexShaderString, fragmentShaderString]为key，GLProgram为Value。
+
 ##### shaderProgramUsageHistory
+
 一个数组，着色器程序使用历史记录。在使用一个着色器程序后，就会添加到这个数组中*（这段代码被注释了，不知道为啥，所以其实没什么用）*。
+
 ##### framebufferCache
+
 一个GPUImageFramebufferCache对象，用来缓存GPUImageFrameBuffer对象，后面会详细说明。
 
 #### GPUImageFrameBuffer
+
 封装了OpenGLES中的帧缓存对象。
 
-##### generateFramebuffer 
-通过runSynchronouslyOnVideoProcessingQueue方法在GPUImage的全局串行队列中执行OpenGL的相关方法生成帧缓存和纹理。
 ##### GPUTextureOptions
+
 对应OpenGL中纹理的相关属性，用来设置设置环绕方式、多级渐远纹理和纹理过滤。
+
 ##### lock和unlock
+
 GPUImageFrameBuffer自己维护了一个引用计数，当执行lock方法时，这个GPUImageFrameBuffer的引用计数加1.执行unlock方法时，这个GPUImageFrameBuffer的引用计数减1，当引用计数为0时，会执行GPUImageContext的*returnFramebufferToCache*方法把这个GPUImageFrameBuffer对象放入到GPUImageContext 的 framebufferCache中缓存起来。
+
+##### generateFramebuffer 
+
+通过runSynchronouslyOnVideoProcessingQueue方法在GPUImage的全局串行队列中执行OpenGL的相关方法生成帧缓存和纹理。
+这个方法会先判断是否支持*supportsFastTextureUpload*，若支持，则会通过CoreVideo的函数CVOpenGLESTextureCacheCreateTextureFromImage()来生成CVOpenGLESTextureRef，然后再通过CVOpenGLESTextureGetTarget()和 CVOpenGLESTextureGetName()函数来获取纹理的target和标识符。否则会使用OpenGlES的原生API来生成纹理。
+
+##### newCGImageFromFramebufferContents
+
+由当前的帧缓存生成一个CGImage对象。
 
 
 #### GPUImageFramebufferCache
@@ -396,6 +440,7 @@ GPUImageFrameBuffer自己维护了一个引用计数，当执行lock方法时，
 GPUImageFramebufferCache定义了一个哈希函数
 
 ```
+
 - (NSString *)hashForSize:(CGSize)size textureOptions:(GPUTextureOptions)textureOptions onlyTexture:(BOOL)onlyTexture;
 {
     if (onlyTexture)
@@ -415,44 +460,247 @@ GPUImageFramebufferCache定义了一个哈希函数
 
 
 ##### activeImageCaptureList数组
+
+这个数组用来缓存正在执行GPUImageFrameBuffer的newCGImageFromFramebufferContents方法的GPUImageFrameBuffer对象。
+
+##### GPUImageFramebufferCache的操作
+
 GPUImageFramebufferCache主要包括三种操作
 
 ```
+
 - (GPUImageFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize textureOptions:(GPUTextureOptions)textureOptions onlyTexture:(BOOL)onlyTexture;
 - (GPUImageFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize onlyTexture:(BOOL)onlyTexture;
+
 ```
 
 这两个方法用来通过帧缓存的大小和纹理属性进行查询对应的GPUImageFramebuffer对象，如果缓存中有的话就直接返回这个对象，并对该framebufferFromCache对象调用lock方法，使它的引用计数加1。
 
 ```
+
 - (void)returnFramebufferToCache:(GPUImageFramebuffer *)framebuffer;
 
+
 ```
+
 这个方法用来把这个framebufferFromCache对象重新放入缓存池中，并对其调用clearAllLocks方法，使它的引用计数归零。
 
 
 ```
+
 - (void)addFramebufferToActiveImageCaptureList:(GPUImageFramebuffer *)framebuffer;
 - (void)removeFramebufferFromActiveImageCaptureList:(GPUImageFramebuffer *)framebuffer;
+
 ```
+
 这两个方法用来操作activeImageCaptureList数组，用来将一个GPUImageFramebuffer对象加入activeImageCaptureList数组和移除。
 
 
 ##### memoryWarningObserver和framebufferCacheQueue
+
 另外GPUImageFramebufferCache还注册了一个NSNotificationCenter通知，用来观察内存使用情况，当收到系统的内存警告时，将清空所有的缓存对象；创建了一个GCD串行队列用来执行GPUImageFramebufferCache中的查询和删除动作，不过这段代码也被注释了，所以的操作还是通过GPUImageContext的*runSynchronouslyOnVideoProcessingQueue*方法放在context管理的那个串行队列中来执行。
 
-
-#### GPUImageFilterPipeline
-
----
-
-### GPUImage输出源
----
-
-### GPUImage滤镜(既是输入源又是输出源)
 ---
 
 
-### GPUImage输入源
+### GPUImageFilter
+
+GPUImageFilter是GPUImage渲染管线中的中间环节，所以既是GPUImageOutput的子类又遵循GPUImageInput协议，可以对每一帧的图像进行颜色、混合、滤镜等处理，每一个不同的滤镜都是通过实现不同的顶点和片段着色器程序来实现的。
+
+--- 
+
+
+### GPUImageFilterPipeline
+
+GPUImageFilterPipeline作用是把多个滤镜放在内部的filters数组中，从GPUImageOutput对象中获取输出到自己的input，在内部的_refreshFilters方法中，会便利filters数组，对每个filter执行addTarget：方法，经过多个滤镜处理后输出到遵循GPUImageInput协议的output。主要目的是方便多重滤镜的使用。
+
+
+---
+
+### GPUImageOutput
+
+GPUImageOutput是个抽象基类。用来表示GPUImage中的输出。
+
+#### addTarget
+
+给这个GPUImageOutput输出到一个GPUImageInput。把一个GPUIageInput添加到GPUImageOutput的targets数组中。然后会调用target的setInputFramebuffer: atIndex:协议方法。
+
+#### outputFramebuffer
+
+这个GPUImageFramebuffer对象是GPUImageOutput的输出内容。
+
+#### GPUImageOutput的派生类
+
+GPUImageOutput还定义了几个GPUImageOutput的子类：
+
+- GPUImageVideoCamera 封装自AVFoundation，可以用来输出视频拍摄到GPUImage的渲染管线中。
+- GPUImageStillCamera GPUImageVideoCamera的子类，用来输出拍摄照片到GPUImage的渲染管线中。
+- GPUImagePicture 用来读取图片数据并输出到GPUImage的渲染管线中。
+- GPUImageMovie 用来读取视频数据到GPUImage的渲染管线中。
+- GPUImageMovieComposition 封装自AVComposition，用来输出视频组合片段到GPUImage的渲染管线中，用来创建视频编辑器应用。
+- GPUImageTextureInput 将OpenGLES中的纹理输出到GPUImage的渲染管线中。
+- GPUImageRawDataInput 读取图片的二进制数据并输出到GPUImage的渲染管线中。
+- GPUImageUIElement 这个类使用CoreGraphics的renderInContext方法将可以将UIView和CALayer转换图片，再转换成OpenGLES纹理，并输出到GPUImage的渲染管线中。
+
+---
+
+
+### GPUImageInput
+
+GPUImageInput协议中声明了下面几个协议方法,遵循这个协议就可以作为GPUImage渲染管线中的输入端。
+
+```
+
+- (void)newFrameReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex;
+- (void)setInputFramebuffer:(GPUImageFramebuffer *)newInputFramebuffer atIndex:(NSInteger)textureIndex;
+- (NSInteger)nextAvailableTextureIndex;
+- (void)setInputSize:(CGSize)newSize atIndex:(NSInteger)textureIndex;
+- (void)setInputRotation:(GPUImageRotationMode)newInputRotation atIndex:(NSInteger)textureIndex;
+- (CGSize)maximumOutputSize;
+- (void)endProcessing;
+- (BOOL)shouldIgnoreUpdatesToThisTarget;
+- (BOOL)enabled;
+- (BOOL)wantsMonochromeInput;
+- (void)setCurrentlyReceivingMonochromeInput:(BOOL)newValue;
+
+
+```
+
+#### setInputFramebuffer: atIndex:
+
+当接受一个新的输入帧缓存时，会收到回调。此时若要对这个帧缓存进行处理，需要先调用lock方法。
+
+#### newFrameReadyAtTime: atIndex:
+
+当一个新帧缓存渲染好了，会收到回调。调用OpenGL的glClear()来设置背景颜色，绑定纹理，设置顶点位置和纹理坐标，然后调用glDrawArrays()绘制，并把当前的帧缓存呈现在屏幕上。呈现完毕后应调用unlock方法。
+
+
+#### setInputRotation:atIndex:
+
+设置帧缓存的旋转模式。
+
+#### setInputSize: atIndex:
+
+设置帧缓存的尺寸。
+
+#### maximumOutputSize
+
+设置最大的帧缓存输出尺寸。
+
+
+### GPUImageView
+
+UIView的子类，通过layerClass方法设置了其layer对象是一个CAEAGLLayer对象。它会加载两个着色器程序：
+顶点着色器接受顶点位置和纹理坐标变量，将顶点位置赋值给gl_Position，并把纹理坐标传递给片段着色器。用来显示图像。
+
+
+```
+
+ attribute vec4 position;
+ attribute vec4 inputTextureCoordinate;
+ 
+ varying vec2 textureCoordinate;
+ 
+ void main() {
+     gl_Position = position;
+     textureCoordinate = inputTextureCoordinate.xy;
+ }
+ 
+```
+
+
+片段着色器，调用GLSL的内置函数texture2D把纹理取样器inputImageTexture和纹理坐标textureCoordinate作为参数传入，赋值给
+gl_FragColor，来决定某个像素的颜色。
+
+```
+
+ varying highp vec2 textureCoordinate;
+ 
+ uniform sampler2D inputImageTexture;
+ 
+ void main() {
+     gl_FragColor = texture2D(inputImageTexture, textureCoordinate);
+ }
+ 
+```
+
+另外，还定义了几个纹理坐标数组来决定画面的旋转和翻转模式
+
+```
+
+    static const GLfloat noRotationTextureCoordinates[] = {
+        0.0f, 1.0f,
+        1.0f, 1.0f,
+        0.0f, 0.0f,
+        1.0f, 0.0f,
+    };
+
+    static const GLfloat rotateRightTextureCoordinates[] = {
+        1.0f, 1.0f,
+        1.0f, 0.0f,
+        0.0f, 1.0f,
+        0.0f, 0.0f,
+    };
+
+    static const GLfloat rotateLeftTextureCoordinates[] = {
+        0.0f, 0.0f,
+        0.0f, 1.0f,
+        1.0f, 0.0f,
+        1.0f, 1.0f,
+    };
+        
+    static const GLfloat verticalFlipTextureCoordinates[] = {
+        0.0f, 0.0f,
+        1.0f, 0.0f,
+        0.0f, 1.0f,
+        1.0f, 1.0f,
+    };
+    
+    static const GLfloat horizontalFlipTextureCoordinates[] = {
+        1.0f, 1.0f,
+        0.0f, 1.0f,
+        1.0f, 0.0f,
+        0.0f, 0.0f,
+    };
+    
+    static const GLfloat rotateRightVerticalFlipTextureCoordinates[] = {
+        1.0f, 0.0f,
+        1.0f, 1.0f,
+        0.0f, 0.0f,
+        0.0f, 1.0f,
+    };
+    
+    static const GLfloat rotateRightHorizontalFlipTextureCoordinates[] = {
+        0.0f, 1.0f,
+        0.0f, 0.0f,
+        1.0f, 1.0f,
+        1.0f, 0.0f,
+    };
+
+    static const GLfloat rotate180TextureCoordinates[] = {
+        1.0f, 0.0f,
+        0.0f, 0.0f,
+        1.0f, 1.0f,
+        0.0f, 1.0f,
+    };
+    
+    
+```
+
+GPUImageView遵循GPUImageInput协议，实现了它的协议方法。
+
+---
+
+### GPUImageMovieWriter
+
+用来将视频写入到磁盘。
+
+### GPUImageTextureOutput
+
+将内容输出为纹理。
+
+### GPUImageRawDataOutput
+
+将内容输出为二进制数据。
 
 ---
